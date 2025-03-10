@@ -1,3 +1,42 @@
+# 🤔💭 1.9 Assignment: Memory Lane
+
+**🧲 Objective:** Deploy a static website to function as a blog or journal.
+
+**💡 Key topics:**
+
+1. Choosing suitable technology
+2. Working with React or HTML for page structure
+3. Utilizing CSS, TailwindCSS, Styled Components, or another styling solution
+4. Managed through Github
+5. Hosted via Github or a PaaS provider such as Netlify or Heroku
+
+**ℹ️ Overview:**
+
+> You will deploy a static website with customized styling and structure that will be content filled with at least 3 short posts on topics related to technology, something you've learned related to your studies recently, or a resource that you would like to review and share your thoughts on that is related to your studies.
+
+## ➡️ Specifications...
+
+- [x] **Create your own layout**
+  - Minimalist blog layout design from Lekoarts
+- [x] **Create your own CSS**
+  - added Theme UI Presets to project dependencies
+  - adding my own color palette/scheming by shadowing original theme
+  - dark and light mode added
+  - further customized default font by adding Adobe font kit
+- [x] **Create your own Javascript**
+  - customizations I added here
+- [x] **Deploy your site**
+  - Deployment handled by Netlify
+- **Site features:**
+  - [x] "Show all" posts page
+    - [x] utilized as homepage
+  - [x] A layout for the posts to populate when individually visited
+  - [x] The ability to navigate between generated pages
+
+> 🧰 Everything beyond this point is the information included in the template I used. I kept everything intact for transparency.
+
+<hr>
+
 <p align="center">
   <a href="https://minimal-blog.lekoarts.de">
     <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
