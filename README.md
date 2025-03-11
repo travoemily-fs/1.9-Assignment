@@ -22,9 +22,8 @@
   - added Theme UI Presets to project dependencies
   - adding my own color palette/scheming by shadowing original theme
   - dark and light mode added
-  - further customized default font by adding Adobe font kit
 - [x] **Create your own Javascript**
-  - customizations I added here
+  - added a "boop the puppy" counter on home page
 - [x] **Deploy your site**
   - Deployment handled by Netlify
 - **Site features:**
