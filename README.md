@@ -20,10 +20,10 @@
 - [x] Add your instructor as a collaborator on your repo if you haven't already
 - [x] All code must be managed through Github
 - [ ] At least one content update meeting all attributes above
-- [ ] Submit your assignment:
-  - [ ] .zip file downloaded from your Github's repo master branch
-  - [ ] a link to your live URL
-  - [ ] a link to your Github repo
+- [x] Submit your assignment:
+  - [x] .zip file downloaded from your Github's repo master branch
+  - [x] a link to your live URL
+  - [x] a link to your Github repo
      
   
 <hr>
