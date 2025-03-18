@@ -71,35 +71,37 @@ const config: GatsbyConfig = {
         `,
         feeds: [
           {
-            // Remove TS annotations from the function signature
             serialize: ({ query: { site, allPost } }) => {
-              return allPost.nodes.map((post) => {
-                const url = site.siteMetadata.siteUrl + post.slug;
-                const content = `<p>${post.excerpt}</p>
+              return allPost.nodes.map(
+                (post: { slug: any; excerpt: any; title: any; date: any }) => {
+                  const url = site.siteMetadata.siteUrl + post.slug;
+                  const content = `<p>${post.excerpt}</p>
                   <div style="margin-top: 50px; font-style: italic;">
                     <strong><a href="${url}">Keep reading</a>.</strong>
                   </div><br /> <br />`;
-
-                return {
-                  title: post.title,
-                  date: post.date,
-                  excerpt: post.excerpt,
-                  url,
-                  guid: url,
-                  custom_elements: [{ "content:encoded": content }],
-                };
-              });
+                  return {
+                    title: post.title,
+                    date: post.date,
+                    excerpt: post.excerpt,
+                    url,
+                    guid: url,
+                    custom_elements: [{ "content:encoded": content }],
+                  };
+                }
+              );
             },
-            query: `{
-              allPost(sort: { date: DESC }) {
-                nodes {
-                  title
-                  date(formatString: "MMMM D, YYYY")
-                  excerpt
-                  slug
+            query: `
+              {
+                allPost(sort: { date: DESC }) {
+                  nodes {
+                    title
+                    date(formatString: "MMMM D, YYYY")
+                    excerpt
+                    slug
+                  }
                 }
               }
-            }`,
+            `,
             output: `rss.xml`,
             title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
           },
@@ -122,9 +124,6 @@ const config: GatsbyConfig = {
 
 export default config;
 
-/* You can keep or remove these interfaces as you wish.
-   They won't break your config as long as they're outside
-   the plugin objects (i.e., no inline type annotations). */
 interface IPostTag {
   name: string;
   slug: string;
