@@ -5,15 +5,12 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    // You can overwrite values here that are used for the SEO component
-    // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
     siteTitle: `1.9 Assignment`,
     siteTitleAlt: `1.9 Assignment: Memory Lane`,
     siteHeadline: `1.9 Assignment: Memory Lane by Emily Travo`,
     siteUrl: `https://minimal-blog.lekoarts.de`,
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
-    siteImage: `/banner.jpg`,
+    siteImage: `/banner.png`,
     siteLanguage: `en`,
     author: `@lekoarts_de`,
   },
@@ -21,17 +18,10 @@ const config: GatsbyConfig = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      // See the theme's README for all available options
       options: {
         navigation: [
-          {
-            title: `Blog`,
-            slug: `/blog`,
-          },
-          {
-            title: `About`,
-            slug: `/about`,
-          },
+          { title: `Blog`, slug: `/blog` },
+          { title: `About`, slug: `/about` },
         ],
       },
     },
@@ -46,12 +36,9 @@ const config: GatsbyConfig = {
       options: {
         name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
         short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
         start_url: `/`,
         background_color: `#fff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
           {
@@ -84,17 +71,14 @@ const config: GatsbyConfig = {
         `,
         feeds: [
           {
-            serialize: ({
-              query: { site, allPost },
-            }: {
-              query: {
-                allPost: IAllPost;
-                site: { siteMetadata: ISiteMetadata };
-              };
-            }) =>
-              allPost.nodes.map((post) => {
+            // Remove TS annotations from the function signature
+            serialize: ({ query: { site, allPost } }) => {
+              return allPost.nodes.map((post) => {
                 const url = site.siteMetadata.siteUrl + post.slug;
-                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`;
+                const content = `<p>${post.excerpt}</p>
+                  <div style="margin-top: 50px; font-style: italic;">
+                    <strong><a href="${url}">Keep reading</a>.</strong>
+                  </div><br /> <br />`;
 
                 return {
                   title: post.title,
@@ -104,24 +88,24 @@ const config: GatsbyConfig = {
                   guid: url,
                   custom_elements: [{ "content:encoded": content }],
                 };
-              }),
+              });
+            },
             query: `{
-  allPost(sort: {date: DESC}) {
-    nodes {
-      title
-      date(formatString: "MMMM D, YYYY")
-      excerpt
-      slug
-    }
-  }
-}`,
+              allPost(sort: { date: DESC }) {
+                nodes {
+                  title
+                  date(formatString: "MMMM D, YYYY")
+                  excerpt
+                  slug
+                }
+              }
+            }`,
             output: `rss.xml`,
             title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
           },
         ],
       },
     },
-    // You can remove this plugin if you don't need it
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-statoscope`,
       options: {
@@ -130,11 +114,17 @@ const config: GatsbyConfig = {
         open: false,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ].filter(Boolean) as Array<PluginRef>,
 };
 
 export default config;
 
+/* You can keep or remove these interfaces as you wish.
+   They won't break your config as long as they're outside
+   the plugin objects (i.e., no inline type annotations). */
 interface IPostTag {
   name: string;
   slug: string;
