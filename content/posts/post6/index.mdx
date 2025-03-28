@@ -1,0 +1,23 @@
+---
+title: "4.6 Blog Post"
+date: "2025-19-03"
+description: "New blog post describing the week's learning."
+tags:
+  - password
+  - users
+  - hashing
+  - salting
+  - security
+  - login
+  - signup
+---
+
+![banner image](./banner3.png)
+
+This final week of class marked a lot of uncharted territory for me. Whilst I had some level of familiarity with most of the previous modules' content, learning how to secure a user's login info with password hashing is something entirely new for me - if not a tad bit overwhelming, but like I always say: practice makes perfect! This was my first experience doing this level of cryptography (also a new word I learned this week, fun fact) so I tried not to be too hard on myself during the process. It's okay that I don't understand it just yet; I will have plenty of more chances in the future to get my feet wet. For now, let's discuss what I do know and everything this week of lectures as taught me.
+
+Salting and hashing. It kind of makes me hungry just talking about it. Unfortunately, there aren't any golden brown, crispy hash browns waiting for us at the end of this journey but we do get a a safer login and sign up process for our users. First things first, let's start with the basics with some definitions. **Encryption** refers to the conversion of sensitive data into a secure format that is protected with a key. **Hashing** describes the process of transforming this sensitive data into a fixed-length string of randomized characters. I think of hashing a lot like wrapping our passwords in a kevlar vest that protects it from any attacks from those with nefarious intent. Without it, our data is like a sitting duck, just waiting to be compromised. **Salting** comes next; this is a method of sprinkling in (or salting) random bits of data to passwords prior to hashing that make them harder to crack.
+
+One can begin to see how these three concepts work together to create a wall of security. Technically you don't have to combine salting and hashing together because each has its own distinct purpose but when joined, they create a reliable and robust security system.
+
+There are several common methods of hashing that we are most likely the encounter out in the wild. The algorithm that we focused on this week is **bcrypt**. Bcrypt comes with built-in salting which is what makes it one of the go-to methods for storing passwords. It was designed back in 1999, making it something of a relic in the tech world yet it's stuck around for so long because it works. I'm excited and nervous to learn more about keeping my work secure and protecting the sensitive information of any potential users. Keeping our web applications safe is a top priority of mine. It's something we all take for granted when browsing the web but there is so much thought and dedication put into getting an app secure and maintaining that security.

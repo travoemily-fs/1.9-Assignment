@@ -1,22 +1,24 @@
-# 📌🎯 3.6 Exercise: Updating Your Static Website
+# 🤔💭 4.6 Exercise: Updating Your Static Website
 
 ➡️ **Objective:**
+
 > Let's keep your content fresh on that new static-generator website you deployed last week. For this week's update, please add a new post/article on one of the following concepts:
 
-- Securing an API
-- Deploying to multiple platforms
-- React Native
-- A recent side-project or tutorial you've completed
-- A recent industry related podcast, interview, or article you've found helpful recently (found outside of the class's provided content)
+- **Password Hashing**
+- JSON Web Tokens
+- Authentication Flow
+- MVC Architecture
 
-✴️ **Topic Chosen:** Building an API
+✴️ **Topic Chosen:** Password Hashing
 
 ### Instructions:
+
 1. Write a short article that substantially communicates one of the listed topics above.
 2. Include at least one image with the article. A header/lead image counts.
 3. Deploy this article to your static website from module 1.9 assignment.
 
 ### Requirements:
+
 - [x] Add your instructor as a collaborator on your repo if you haven't already
 - [x] All code must be managed through Github
 - [x] At least one content update meeting all attributes above
@@ -24,14 +26,47 @@
   - [x] .zip file downloaded from your Github's repo master branch
   - [x] a link to your live URL
   - [x] a link to your Github repo
-     
+
+<hr>
+
+# 📌🎯 3.6 Exercise: Updating Your Static Website
+
+➡️ **Objective:**
+
+> Let's keep your content fresh on that new static-generator website you deployed last week. For this week's update, please add a new post/article on one of the following concepts:
+
+- Securing an API
+- Deploying to multiple platforms
+- **React Native**
+- A recent side-project or tutorial you've completed
+- A recent industry related podcast, interview, or article you've found helpful recently (found outside of the class's provided content)
+
+✴️ **Topic Chosen:** React Native
+
+### Instructions:
+
+1. Write a short article that substantially communicates one of the listed topics above.
+2. Include at least one image with the article. A header/lead image counts.
+3. Deploy this article to your static website from module 1.9 assignment.
+
+### Requirements:
+
+- [x] Add your instructor as a collaborator on your repo if you haven't already
+- [x] All code must be managed through Github
+- [x] At least one content update meeting all attributes above
+- [x] Submit your assignment:
+  - [x] .zip file downloaded from your Github's repo master branch
+  - [x] a link to your live URL
+  - [x] a link to your Github repo
+
 <hr>
 # 🧨💥 2.6 Exercise: Updating Your Static Website
 
 ➡️ **Objective:**
+
 > Let's keep your content fresh on that new static-generator website you deployed last week. For this week's update, please add a new post/article on one of the following concepts:
 
-- Building an API
+- **Building an API**
 - Developing an API
 - Best Practices for using APIs within React
 - A recent side-project or tutorial you've completed
@@ -40,11 +75,13 @@
 ✴️ **Topic Chosen:** Building an API
 
 ### Instructions:
+
 1. Write a short article that substantially communicates one of the listed topics above.
 2. Include at least one image with the article. A header/lead image counts.
 3. Deploy this article to your static website from module 1.9 assignment.
 
 ### Requirements:
+
 - [x] Add your instructor as a collaborator on your repo if you haven't already
 - [x] All code must be managed through Github
 - [x] At least one content update meeting all attributes above
@@ -52,8 +89,7 @@
   - [x] .zip file downloaded from your Github's repo master branch
   - [x] a link to your live URL
   - [x] a link to your Github repo
-     
-  
+
 <hr>
 
 ## 🤔💭 1.9 Assignment: Memory Lane
